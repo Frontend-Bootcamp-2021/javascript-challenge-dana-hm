@@ -313,4 +313,39 @@ let data = [
 	}
 ];
 
-console.log('👻', data)
+const groupInfo = data.reduce((groups, person) => {
+    const {A = Orange , B = Crimson, C = Khaki, D = Pink , E = Aquamarine, F = Turquoise, G = Yellow, H = Goldenrod, I =Fuscia, J =Puce ,K = Maroon, L=Purple,} = groups;
+    if (person.group === 'A') {
+        return {...groups, A: A + 1};
+    } else if (person.group === 'B') {
+        return {...groups, B: B + 1};
+	} else if (person.group === 'C') {
+	return {...groups, C: C + 1};
+} else if (person.group === 'D') {
+	return {...groups, D: D + 1};
+} else if (person.group === 'F') {
+	return {...groups, F: F + 1};
+} else if (person.group === 'G') {
+	return {...groups, G: G + 1};
+} else if (person.group === 'H') {
+	return {...groups, H: H + 1};
+} else if (person.group === 'I') {
+	return {...groups, I: I + 1};
+} else if (person.group === 'J') {
+	return {...groups, J: J + 1};
+} else if (person.group === 'K') {
+	return {...groups, K: K + 1};
+} else if (person.group === 'L') {
+	return {...groups, L: L + 1};
+
+
+};; {};;
+
+console.log(groupInfo);
+
+})
+
+data.sort(function(x,y){
+	return(x===y)
+});
+console.log(data);
